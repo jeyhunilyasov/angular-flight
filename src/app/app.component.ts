@@ -157,7 +157,7 @@ export class AppComponent {
         },
         title: {
           display: true,
-          text: "Flight Time table"
+          text: "Flight Time table DEL"
         },
         // animation: {
         //   onComplete: function() {
