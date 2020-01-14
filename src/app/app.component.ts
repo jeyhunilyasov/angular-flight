@@ -58,10 +58,11 @@ export class AppComponent {
       };
       this.inValues.push(-this.data[i][1]);
       this.outValues.push(this.data[i][2]);
-      this.timeValues.push(this.data[i[0]]);
+      if( this.data[i][0] <= 12) {
+        this.timeValues.push(this.data[i][0] + ":00 A.M");
+      } else this.timeValues.push(this.data[i][0] + ":00 P.M");
       this.jsonData.push(ele);
     }
-    console.log(this.jsonData);
   }
 
   // title = "angular8chartjs";
@@ -71,15 +72,7 @@ export class AppComponent {
     this.canvas = document.getElementById("myChart");
     this.ctx = this.canvas.getContext("2d");
     var horizontalBarChartData = {
-      labels: [
-        "8:00 A.M",
-        "9:00 A.M",
-        "10:00 A.M",
-        "11:00 A.M",
-        "12:00 P.M",
-        "1:00 P.M",
-        "2:00 P.M"
-      ],
+      labels: this.timeValues,
       datasets: [
         {
           label: "Inbound flights",
