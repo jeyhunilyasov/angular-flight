@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Flight table</a>
+</nav>
+
+<div class="container">
+  <!-- <div class="row" style="text-align: center;">
+    <div class="col-md-2">
+      Time
+    </div>
+    <div class="col-md-5">
+      Inbound Flights
+    </div>
+    <div class="col-md-5">
+      Outbound Flights
+    </div>
+  </div>
+  <div class="" style="text-align: center;" *ngFor="let item of jsonData">
+    <div class="row">
+      <div class="col-md-1">{{item.time}}</div>
+      <div class="col-md-5" style="background-color: #f4b084;">{{item.inbound}}</div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5"></div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5" style="background-color: #ffc000;">{{item.outbound}}</div>
+    </div>
+  </div> -->
+  <div class="row">
+    <canvas id="myChart" width="700" height="400"></canvas>
+  </div>
+  <div class="row" style="margin-top: 15px;">
+    <input type="file" (change)="onFileChange($event)" multiple="false" style="margin: auto;" />
+  </div>
+</div>
